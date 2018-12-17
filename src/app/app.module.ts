@@ -10,6 +10,18 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AuthProvider } from '../providers/auth/auth';
+import { CrudProvider } from '../providers/crud/crud';
+
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+
+import { IonicStorageModule } from '@ionic/storage';
+
+import { HttpModule } from '@angular/http';
+
+import { EditPage } from '../pages/edit/edit';
+import { InsertPage } from '../pages/insert/insert';
 
 @NgModule({
   declarations: [
@@ -17,11 +29,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage,
+    EditPage,
+    InsertPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,12 +47,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage,
+    EditPage,
+    InsertPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider,
+    CrudProvider
   ]
 })
 export class AppModule {}
