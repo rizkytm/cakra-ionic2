@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { LoginPage } from '../pages/login/login';
+import { HomePage } from '../pages/home/home';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class MyApp {
       if (res === '') {
         this.rootPage  =LoginPage;
       } else {
-        this.rootPage  =TabsPage;
+        this.rootPage  =HomePage;
       }
       
     })

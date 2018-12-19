@@ -6,7 +6,7 @@
 
     <ion-buttons end>
       <button ion-button icon-only (click)="inserPage()">
-        <ion-icon name="options"></ion-icon>
+        <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
 
@@ -24,7 +24,9 @@
 
   <div  *ngFor=" let item of mydata">
  
-
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
     <ion-list >
       <ion-item-sliding>
@@ -50,11 +52,15 @@
         </ion-item-options>
       </ion-item-sliding>
     </ion-list>
+
+
   
   </div>
   
   
-
+<div padding>
+    <button ion-button color="secondary"  (click)="myLogOut()" >Log Out</button>
+  </div>
 
 
 

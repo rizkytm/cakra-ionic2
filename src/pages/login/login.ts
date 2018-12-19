@@ -4,6 +4,8 @@ import { IonicPage, NavController,AlertController, NavParams  } from 'ionic-angu
 
 import { AuthProvider } from '../../providers/auth/auth';
 import { TabsPage } from '../tabs/tabs';
+import { HomePage } from '../home/home';
+import { RegisterPage } from '../register/register';
 
 
 
@@ -74,7 +76,7 @@ export class LoginPage {
         
          this.authService.login(credentials).then((result) => {
             console.log(result);
-            this.navCtrl.setRoot(TabsPage);
+            this.navCtrl.setRoot(HomePage);
            
         }, (err) => {
      
@@ -103,9 +105,12 @@ export class LoginPage {
 
 myLogOut(){
   this.authService.logout();
+  this.navCtrl.setRoot(LoginPage);
 }
 
-
+Register(){
+  this.navCtrl.push(RegisterPage);
+}
 
 
 

@@ -35,8 +35,8 @@ export class AuthProvider {
         this.http.post(apiKey+'api/user/register', JSON.stringify(details), {headers: headers})
           .subscribe(res => {
             let data = res.json();
-           // this.token = data.token;
-            //this.storage.set('token', data.token);
+           this.token = data.token;
+            this.storage.set('token', data.token);
             resolve(data);
  
           }, (err) => {

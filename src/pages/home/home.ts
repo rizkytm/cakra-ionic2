@@ -7,6 +7,9 @@ import { CrudProvider } from '../../providers/crud/crud';
 import { EditPage } from '../edit/edit';
 import { InsertPage } from '../insert/insert';
 
+import { AuthProvider } from '../../providers/auth/auth';
+import { LoginPage } from '../login/login';
+
 
 @Component({
   selector: 'page-home',
@@ -15,7 +18,8 @@ import { InsertPage } from '../insert/insert';
 export class HomePage {
   mydata:any
   constructor(public navCtrl: NavController,
-    public crudProvider:CrudProvider) {
+    public crudProvider:CrudProvider,
+    public authService: AuthProvider) {
 
       this.crudProvider.getPosts().then((data) => {
      
@@ -26,7 +30,14 @@ export class HomePage {
 
   }
 
+doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
 
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
 
 
 
@@ -43,7 +54,7 @@ this.navCtrl.push(EditPage, {
 
 })
     
-  }
+}
 
 
 
@@ -72,7 +83,10 @@ this.navCtrl.push(EditPage, {
 
   }
 
-
+  myLogOut(){
+  this.authService.logout();
+  this.navCtrl.setRoot(LoginPage);
+}
 
 
 

@@ -3,6 +3,7 @@ import { IonicPage, NavController,AlertController, NavParams } from 'ionic-angul
 import { AuthProvider } from '../../providers/auth/auth';
 
 import { LoginPage } from '../login/login';
+import { HomePage } from '../home/home';
 /**
  * Generated class for the RegisterPage page.
  *
@@ -67,7 +68,7 @@ export class RegisterPage {
         
          this.authService.createAccount(credentials).then((result) => {
             console.log(result);
-            this.navCtrl.setRoot(LoginPage);
+            this.navCtrl.setRoot(HomePage);
            
         }, (err) => {
      

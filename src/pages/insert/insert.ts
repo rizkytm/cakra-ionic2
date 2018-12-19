@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { CrudProvider } from '../../providers/crud/crud';
 /**
 /**
@@ -29,7 +29,8 @@ export class InsertPage {
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
-    public crudProvider:CrudProvider) {
+    public crudProvider:CrudProvider,
+    public loadCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -43,6 +44,13 @@ export class InsertPage {
     this.crudProvider.insertPosts(this.myInfo).then((result)=>{
       console.log(result)
       this.navCtrl.pop()
+      let loading = this.loadCtrl.create({
+        content: 'memuat..'
+      });
+
+      loading.present();
+      loading.dismiss();
+
     },(err)=>{
       console.log("insert err: "+ err)
       console.log("this.myInfo: "+ JSON.stringify(this.myInfo))
