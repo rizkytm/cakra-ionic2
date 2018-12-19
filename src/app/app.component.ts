@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+import { OnboardingPage } from "../pages/onboarding/onboarding";
 
 import { AuthProvider } from '../providers/auth/auth';
 
@@ -15,9 +16,12 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any ;
+  rootPage: any = OnboardingPage;
 
-  constructor(platform: Platform, 
+
+
+  constructor(
+    platform: Platform, 
     statusBar: StatusBar, 
     splashScreen: SplashScreen,
     public authService: AuthProvider, ) {
@@ -35,7 +39,7 @@ export class MyApp {
       console.log("res : " + res)
   
       if (res === '') {
-        this.rootPage  =LoginPage;
+        this.rootPage  = OnboardingPage;
       } else {
         this.rootPage  =HomePage;
       }

@@ -1,0 +1,101 @@
+page-home {
+
+    .bg-image {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 50% 50%;
+        vertical-align: middle;
+        width: 100%;
+        display: inline-block;
+        background-image: url('../assets/imgs/onboarding1.png');
+    }
+
+    .bg-image2 {
+        background-image: url('../assets/imgs/onboarding2.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .bg-image3 {
+        background-image: url('../assets/imgs/onboarding3.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+
+    .bg-image4 {
+        background-image: url('../assets/imgs/onboarding4.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+
+    .button1 {
+        position: absolute;
+        left:    0;
+        bottom:   0;
+        background-color: inherit;
+        padding: 30px 28px;
+        font-size: 22px;
+        font-style: italic;
+        cursor: pointer;
+        display: inline-block;
+        color: rgb(251, 191, 27);
+    }
+
+    .button2 {
+        position: absolute;
+        right:    0;
+        bottom:   0;
+        background-color: inherit;
+        padding: 30px 28px;
+        font-size: 24px;
+        font-style: italic;
+        cursor: pointer;
+        display: inline-block;
+        color: rgb(251, 191, 27);
+    }
+
+    .button3 {
+        position: absolute;
+        left: 6% ;
+        bottom:14% ;
+        background-color: #ffcc00;
+        margin: 1%;
+        padding: 3% 37.5%;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+
+    .button4 {
+        position: absolute;
+        left: 6% ;
+        bottom:6% ;
+        background-color: inherit;
+        border: 1px solid white;
+        border-color: #FFFFFF;
+        margin: 1%;
+        padding: 2.5% 34.5%;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+
+
+    .swiper-pagination-bullet-active {
+          background:rgb(5, 5, 5);       
+      }
+
+    .swiper-pagination {
+        bottom: 78% !important;
+    }
+
+    #skip {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        background: none !important;
+        text-align: center;
+        cursor: pointer;
+        z-index: 5;
+    }
+}

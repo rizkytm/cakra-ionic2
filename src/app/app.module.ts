@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
 import { CrudProvider } from '../providers/crud/crud';
 
+import { OnboardingPage } from "../pages/onboarding/onboarding";
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 
@@ -33,6 +34,7 @@ import { InsertPage } from '../pages/insert/insert';
     LoginPage,
     RegisterPage,
     EditPage,
+    OnboardingPage,
     InsertPage
   ],
   imports: [
@@ -51,6 +53,7 @@ import { InsertPage } from '../pages/insert/insert';
     LoginPage,
     RegisterPage,
     EditPage,
+    OnboardingPage,
     InsertPage
   ],
   providers: [
