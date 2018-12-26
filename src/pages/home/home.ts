@@ -9,6 +9,7 @@ import { InsertPage } from '../insert/insert';
 
 import { AuthProvider } from '../../providers/auth/auth';
 import { LoginPage } from '../login/login';
+import { TabsPage } from '../tabs/tabs';
 
 
 @Component({

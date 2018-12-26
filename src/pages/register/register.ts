@@ -35,6 +35,10 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
 
+  start(){
+    this.navCtrl.push(LoginPage);
+  }
+
 
   errorFunc(message){
     let alert = this.alertCtrl.create({

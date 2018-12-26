@@ -47,7 +47,7 @@ export class LoginPage {
 
   errorFunc(message){
     let alert = this.alertCtrl.create({
-      title: 'Warning!',
+      title: 'Perhatian!',
       subTitle: message,
       buttons: ['OK']
     });
@@ -64,7 +64,7 @@ export class LoginPage {
       console.log(this.email.trim() + "   " + this.password.trim() )
        
       if (this.password.trim()  === '') {
-        this.errorFunc('Please put your password')
+        this.errorFunc('Masukan kata sandi Anda')
  
       }else{
  
@@ -76,12 +76,12 @@ export class LoginPage {
         
          this.authService.login(credentials).then((result) => {
             console.log(result);
-            this.navCtrl.setRoot(HomePage);
+            this.navCtrl.setRoot(TabsPage);
            
         }, (err) => {
      
             console.log(err);
-            this. errorFunc('Wrong credentials ! try again')
+            this. errorFunc('Kata sandi atau email anda salah!')
             console.log("credentials: "+JSON.stringify(credentials))
             
         });
@@ -91,7 +91,7 @@ export class LoginPage {
    }
    else{
     
-    this. errorFunc('Please put a vaild password !  for ex:(123456)')
+    this. errorFunc('Silakan masukan email dan kata sandi anda...')
    
     }
  

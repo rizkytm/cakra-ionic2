@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { OnboardingPage } from "../pages/onboarding/onboarding";
 
+
 import { AuthProvider } from '../providers/auth/auth';
 
 import { LoginPage } from '../pages/login/login';
@@ -41,7 +42,7 @@ export class MyApp {
       if (res === '') {
         this.rootPage  = OnboardingPage;
       } else {
-        this.rootPage  =HomePage;
+        this.rootPage  = TabsPage;
       }
       
     })

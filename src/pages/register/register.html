@@ -4,7 +4,67 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+
+<!-- -->
+<ion-content padding class="animated fadeIn sign-up">
+    <div class="signup-content">
+  
+      <!-- Logo -->
+      <div padding-horizontal text-center class="animated fadeInDown">
+        <div class="logo-signup2"></div>
+        <!-- <h2 ion-text class="text-white">
+          <strong>Ionic 3</strong> Start Theme
+        </h2> -->
+      </div>
+  
+      <!-- signup form -->
+      <ion-list>
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="person" item-start ></ion-icon>
+            Nama
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="mail" item-start ></ion-icon>
+            Email
+          </ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="lock" item-start ></ion-icon>
+            Kata sandi
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+  
+      </ion-list>
+  
+      <div>
+        <button ion-button block class="btn-signup" tappable (click)="myRegister()">
+          Daftar
+        </button>
+  
+       
+      </div>
+  
+      <!-- Other links -->
+      <div text-center margin-top>
+        <span ion-text class="text-purple" tappable (click)="start()"><strong> Saya sudah punya Akun </strong></span>
+      </div>
+  
+    </div>
+  </ion-content>
+  
+
+////////////////
+
+<!--ion-header>
 
   <ion-navbar>
     <ion-title>Register</ion-title>
@@ -50,4 +110,4 @@
 
 
 
-</ion-content>
+</ion-content-->
