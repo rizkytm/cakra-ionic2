@@ -57,11 +57,6 @@ this.navCtrl.push(EditPage, {
     
 }
 
-
-
-
-
-
   inserPage(){
     this.navCtrl.push(InsertPage)
   }

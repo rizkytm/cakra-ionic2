@@ -17,22 +17,28 @@ export class EditPage {
 
 
   myInfo = {
- 
-    name:'', 
-    details:'' 
-    
+
+    user_id:'',
+    cover:'',
+    judul:'',
+    isi:'',
+    category_id:''
+
   }
 
   id=''
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public crudProvider:CrudProvider) {
 
 
       this.id = navParams.get('id');
-      this.myInfo.name = navParams.get('name');
-      this.myInfo.details = navParams.get('details');
+      this.myInfo.user_id = navParams.get('user_id');
+      this.myInfo.cover = navParams.get('cover');
+      this.myInfo.judul = navParams.get('judul');
+      this.myInfo.isi = navParams.get('isi');
+      this.myInfo.category_id = navParams.get('category_id');
 
 
   }
@@ -56,7 +62,7 @@ export class EditPage {
       console.log("insert err: "+ err)
       console.log("this.myInfo: "+ JSON.stringify(this.myInfo))
     })
- 
+
 
 
   }

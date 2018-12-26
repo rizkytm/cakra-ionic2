@@ -18,16 +18,19 @@ export class InsertPage {
 
 
   myInfo = {
- 
-    name:'', 
-    details:'' 
-    
+
+    user_id:'',
+    cover:'',
+    judul:'',
+    isi:'',
+    category_id:''
+
   }
 
 
 
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public crudProvider:CrudProvider,
     public loadCtrl: LoadingController) {
@@ -55,13 +58,9 @@ export class InsertPage {
       console.log("insert err: "+ err)
       console.log("this.myInfo: "+ JSON.stringify(this.myInfo))
     })
-    
-   
+
+
    }
-
-
-
-
 
 
 }

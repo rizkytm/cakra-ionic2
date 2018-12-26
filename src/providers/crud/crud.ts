@@ -19,7 +19,7 @@ import { Storage } from '@ionic/storage';
 export class CrudProvider {
 
   constructor(public storage: Storage ,
-    public http: Http, 
+    public http: Http,
      ) {
     console.log('Hello CrudProvider Provider');
   }
@@ -36,15 +36,15 @@ export class CrudProvider {
        headers.append('Authorization', 'Bearer '+value);
 
        console.log('value: ' + value);
-  
+
        this.http.get(apiKey+'api/posts', {headers: headers})
          .map(res => res.json())
          .subscribe(data => {
            resolve(data);
          }, (err) => {
            reject(err);
-         }); 
-     }) 
+         });
+     })
 
    });
 
@@ -72,8 +72,8 @@ export class CrudProvider {
          resolve(data);
        }, (err) => {
          reject(err);
-       }); 
-   }) 
+       });
+   })
 
  });
 
@@ -100,8 +100,8 @@ editPosts(id,postInfo){
          resolve(data);
        }, (err) => {
          reject(err);
-       }); 
-   }) 
+       });
+   })
 
  });
 
@@ -127,8 +127,8 @@ deletePosts(id ){
          resolve(data);
        }, (err) => {
          reject(err);
-       }); 
-   }) 
+       });
+   })
 
  });
 

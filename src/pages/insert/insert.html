@@ -19,21 +19,36 @@
     <ion-list>
 
         <ion-item>
-          <ion-label floating>name</ion-label>
-          <ion-input type="text" [(ngModel)]="myInfo.name"></ion-input>
+          <ion-label floating>user_id</ion-label>
+          <ion-input type="text" [(ngModel)]="myInfo.user_id"></ion-input>
         </ion-item>
- 
+
         <ion-item>
-          <ion-label floating>details</ion-label>
-          <ion-textarea type="text" [(ngModel)]="myInfo.details"></ion-textarea>
+          <ion-label floating>cover</ion-label>
+          <ion-textarea type="text" [(ngModel)]="myInfo.cover"></ion-textarea>
         </ion-item>
-      
+
+        <ion-item>
+          <ion-label floating>judul</ion-label>
+          <ion-textarea type="text" [(ngModel)]="myInfo.judul"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>isi</ion-label>
+          <ion-textarea type="text" [(ngModel)]="myInfo.isi"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>category</ion-label>
+          <ion-textarea type="text" [(ngModel)]="myInfo.category_id"></ion-textarea>
+        </ion-item>
+
       </ion-list>
-    
-    
+
+
       <div padding>
         <button   ion-button color="secondary"   (click)="insertData()"   >Insert</button>
       </div>
-    
+
 
 </ion-content>

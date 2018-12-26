@@ -6,8 +6,7 @@ import { HomePage } from '../home/home';
 
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
-import { TripsPage } from '../trips/trips';
-import { TripService } from "../../services/trip-service";
+
 
 
 @Component({
@@ -16,7 +15,7 @@ import { TripService } from "../../services/trip-service";
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = TripsPage;
+  tab2Root = AboutPage;
   tab3Root = ContactPage;
 
   tab4Root = LoginPage;
