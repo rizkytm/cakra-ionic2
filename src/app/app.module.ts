@@ -8,7 +8,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { ManagePage } from '../pages/manage_home/manage_home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,6 +33,7 @@ import { InsertPage } from '../pages/insert/insert';
     AboutPage,
     ContactPage,
     HomePage,
+    ManagePage,
     TabsPage,
     LoginPage,
     RegisterPage,
@@ -53,6 +54,7 @@ import { InsertPage } from '../pages/insert/insert';
     AboutPage,
     ContactPage,
     HomePage,
+    ManagePage,
     TabsPage,
     LoginPage,
     RegisterPage,

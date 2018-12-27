@@ -13,7 +13,14 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
+import { ManagePage } from '../pages/manage_home/manage_home';
 import { AboutPage } from '../pages/about/about';
+
+export interface MenuItem {
+    title: string;
+    component: any;
+    icon: string;
+}
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +29,8 @@ export class MyApp {
   @ViewChild('content') navCtrl: NavController;
 
   rootPage: any = OnboardingPage;
-  mydata:any
+
+  appMenuItems: Array<MenuItem>;
 
 
 
@@ -39,25 +47,15 @@ export class MyApp {
       splashScreen.hide();
     });
 
-    this.crudProvider.getPosts().then((data) => {
 
-      this.mydata = data["data"]
-      console.log( this.mydata)
-    })
 
    this.appMenuItems = [
      {title: 'Home', component: HomePage, icon: 'home'},
-     {title: 'Bantuan', component: AboutPage, icon: 'contacts'},
-     {title: 'Hasil Task Anda', component: AboutPage, icon: 'checkmark'},
-     {title: 'Help & Support', component: AboutPage, icon: 'help-circle'}
+     {title: 'Diskusi anda', component: AboutPage, icon: 'contacts'},
+     {title: 'Bantuan', component: AboutPage, icon: 'help-circle'}
    ];
 
 
-    this.crudProvider.getPosts().then((data) => {
-
-      this.mydata = data["data"]
-      console.log( this.mydata)
-    })
 
 
     this.authService.checkAuthentication().then((res)=>{
