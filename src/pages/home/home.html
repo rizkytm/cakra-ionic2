@@ -42,29 +42,32 @@
       </ion-refresher-content>
     </ion-refresher>
 
-  <div  *ngFor=" let item of mydata">
+  <div  *ngFor=" let item of mydata" margin-bottom>
   <div class="background-filter rlt">
 
     <div class="card">
 
       <ion-avatar>
-      <div class="item-start">
+      <div>
+        <div text-right margin-top ion-text>
         <img class="circle-pic" src="assets/img/aa.jpg"/>
-        <p><strong>{{item.judul}}</strong></p>
-        <p>yaya</p>
+        {{item.created_at}} </div>
       </div>
       </ion-avatar>
 
 
-      <div class="item item-body">
+      <div>
         <img class="full-image" src="assets/img/trip_6.jpg">
-        <p>
+        <p ion-text class="text-purple" class="text-2x"> <strong> {{item.judul}} </strong> </p>
+        <span ion-text class="text-1x">
         {{item.isi}}
-        </p>
-        <p>
-          <a href="#" class="subdued">1 Like</a>
-          <a href="#" class="subdued">5 Comments</a>
-        </p>
+        </span>
+        <div text-left margin-top>
+          <button ion-button icon-only>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+              <span ion-text href="#" class="text-purple">Comments</span>
+        </div>
 
       <p>
       <button ion-button color="danger"  (click)="onDelete(item.id)">
@@ -73,20 +76,13 @@
       </button>
       </p>
 
-
       </div>
 
     </div>
 
-
   </div>
+
 </div>
-
-  <div padding>
-    <button ion-button color="secondary"  (click)="myLogOut()" >Log Out</button>
-  </div>
-
-
 
   <ion-fab bottom right item-start (click)="inserPage()">
       <button ion-fab class="btn-signin"><ion-icon name="md-create"></ion-icon></button>
