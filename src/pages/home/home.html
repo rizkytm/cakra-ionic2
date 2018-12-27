@@ -6,11 +6,6 @@
         <ion-title align="center">
           Cakra
         </ion-title>
-        <ion-buttons end>
-          <button ion-button (click)="doClick()">
-            <ion-icon name="more"></ion-icon>
-          </button>
-        </ion-buttons>
       </ion-toolbar>
   </ion-header>
 
@@ -18,13 +13,11 @@
 
 
     <!--div class="card">
-
       <div class="user-avatar">
         <img src="assets/img/aa.jpg">
         <h2>Marty McFly</h2>
         <p>November 05, 1955</p>
       </div>
-
       <div class="item item-body">
         <img class="full-image" src="assets/img/aa.jpg">
         <p>
@@ -37,9 +30,8 @@
           <a href="#" class="subdued">5 Comments</a>
         </p>
       </div>
-
     </div-->
-    <ion-content>
+    <ion-content padding class="trips detail-bg">
 
     <ion-refresher (ionRefresh)="doRefresh($event)">
       <ion-refresher-content
@@ -51,16 +43,21 @@
     </ion-refresher>
 
   <div  *ngFor=" let item of mydata">
+  <div class="background-filter rlt">
 
     <div class="card">
 
-      <div class="items-avatar">
-        <img src="assets/img/aa.jpg">
+      <ion-avatar>
+      <div class="item-start">
+        <img class="circle-pic" src="assets/img/aa.jpg"/>
+        <p><strong>{{item.judul}}</strong></p>
         <p>yaya</p>
       </div>
+      </ion-avatar>
+
 
       <div class="item item-body">
-        <img class="full-image" src="assets/img/aa.jpg">
+        <img class="full-image" src="assets/img/trip_6.jpg">
         <p>
         {{item.isi}}
         </p>
@@ -76,13 +73,14 @@
       </button>
       </p>
 
+
       </div>
 
     </div>
 
 
-
   </div>
+</div>
 
   <div padding>
     <button ion-button color="secondary"  (click)="myLogOut()" >Log Out</button>
@@ -91,7 +89,7 @@
 
 
   <ion-fab bottom right item-start (click)="inserPage()">
-      <button ion-fab><ion-icon name="md-create"></ion-icon></button>
+      <button ion-fab class="btn-signin"><ion-icon name="md-create"></ion-icon></button>
   </ion-fab>
 
 </ion-content>

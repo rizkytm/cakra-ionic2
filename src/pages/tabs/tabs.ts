@@ -15,11 +15,9 @@ import { RegisterPage } from '../register/register';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab2Root = ContactPage;
+  tab4Root = AboutPage;
 
-  tab4Root = LoginPage;
-  tab5Root = RegisterPage;
 
   constructor() {
 
