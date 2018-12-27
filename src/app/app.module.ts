@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -38,7 +39,7 @@ import { InsertPage } from '../pages/insert/insert';
     EditPage,
     OnboardingPage,
     InsertPage,
-   
+
   ],
   imports: [
     BrowserModule,
@@ -58,9 +59,10 @@ import { InsertPage } from '../pages/insert/insert';
     EditPage,
     OnboardingPage,
     InsertPage,
-  
+
   ],
   providers: [
+    FileTransfer,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

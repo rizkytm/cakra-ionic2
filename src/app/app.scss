@@ -201,6 +201,25 @@
   overflow: hidden;
 }
 
+.circle-pic{
+    width:50px;
+    height:50px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.image {
+     height: 5vw;
+     width: 5vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .no-round {
   border-radius: 0;
 }
@@ -503,10 +522,28 @@ ion-navbar.no-border {
   }
 }
 
+
+
 //TabsPage dan analisis
 .tabs {
 background-color: rgb(122, 4, 146) !important;
 }
+
+.tabs-md .tabbar {
+    background: rgb(139, 53, 105);
+}
+
+.tabs-md .tab-button[aria-selected=true]{
+		color: green;
+		.tab-button-icon {
+			color: yellow;
+		}
+	}
+
+.tabs-md .tab-button-text {
+  	font-size: 12px;
+  	color: yellow;
+  }
 
 .tombol3 {
     position: absolute;
@@ -725,4 +762,3 @@ ion-icon[ng-reflect-disabled="true"] {
 .fadeInDown {
   animation-name: fadeInDown;
 }
-
